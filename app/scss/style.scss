@@ -78,9 +78,7 @@
   font-size: 14px;
   line-height: 32px;
   @extend %rubik-400;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  margin-top: auto;
 }
 .footer-top{
   display: flex;

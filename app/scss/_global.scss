@@ -2,6 +2,9 @@ body{
   color:$darkblue;
   font-size: 16px;
   line-height: 30px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 .container{
   max-width: 1200px;
