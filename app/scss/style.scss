@@ -14,7 +14,7 @@
 .menu{
   &__list{
     display: flex;
-    gap: 30px;
+    column-gap: 30px;
     color:$darkblue;
   }
   &__list-link{
@@ -73,6 +73,59 @@
     border-radius: 50%
   }
 }
+
+
+.top-slider{
+  &__container{
+    background-color: #fcd7b6;
+  }
+  &__content{
+    padding: 210px 0;
+  }
+  &__title{
+    font-size: 72px;line-height: 70px;
+    margin-bottom: 35px;
+    @extend %rubik-500;
+    color: $darkblue;
+    max-width: 470px;
+    text-transform: uppercase;
+  }
+  &__text{
+    font-size: 18px;
+    line-height: 30px;
+    @extend %rubik-400;
+    max-width: 370px;
+    color: $lightblue;
+    margin-bottom: 40px;
+  }
+  &__btn{
+    background-color: #a3bbc8;
+    font-size: 15px;
+    line-height: 12px;
+    @extend %rubik-500;
+    padding-left: 30px;
+    padding-right: 100px;
+    padding: 20px 100px 20px 30px;
+    color: #fff;
+    position: relative;
+    &::before{
+      content: "";
+      position: absolute;
+      background-image: url("../images/top-slider/arrow.svg");
+      background-repeat: no-repeat;
+      width: 22px;
+      height: 9px;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 19px;
+    }
+  }
+
+}
+
+
+
+
 .footer{
   color: #7b7b7b;
   font-size: 14px;
