@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 
@@ -78,9 +79,7 @@
 .top-slider{
   &__container{
     background-color: #fcd7b6;
-  }
-  &__content{
-    padding: 210px 0;
+    padding-bottom: 40px;
   }
   &__title{
     font-size: 72px;line-height: 70px;
@@ -119,8 +118,41 @@
       transform: translateY(-50%);
       right: 19px;
     }
+    
   }
-
+  &__item{
+    display: flex;
+    justify-content: space-between;
+    padding: 210px 0 200px;
+  }
+  &__img{
+    margin-top: 50px;
+  }
+  .slick-dots{
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    margin-top: -45px;
+    li{
+      button{
+        border: none;
+        background-color: #fff;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        font-size: 10.8px;
+        line-height: 8.7px;
+        @extend %rubik-500;
+        opacity: .3;
+        transition: all .8s;
+      }
+      &.slick-active{
+        button{
+          opacity: 1;
+        }
+      }
+    }
+  }
 }
 
 
