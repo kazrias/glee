@@ -5,62 +5,70 @@
 @import 'global';
 
 
-.header__inner{
+.header__inner {
   padding: 50px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.menu{
-  &__list{
+.menu {
+  &__list {
     display: flex;
     column-gap: 30px;
-    color:$darkblue;
+    color: $darkblue;
   }
-  &__list-link{
+
+  &__list-link {
     color: $darkblue;
     @extend %rubik-500;
     font-size: 15px;
     line-height: 12px;
   }
 }
-.logo{
+
+.logo {
   display: flex;
   gap: 14px;
 }
 
-.user-nav{
+.user-nav {
   display: flex;
   gap: 20px;
+
   &__link--search,
   &__wrapper,
-  &__menu{
+  &__menu {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  &__link--search{
+
+  &__link--search {
     width: 50px;
     height: 50px;
     background-color: #edf1f4;
     border-radius: 50%;
   }
-  &__wrapper{
+
+  &__wrapper {
     background-color: #fcd7b6;
     gap: 45px;
     width: 180px;
     border-radius: 25px;
-  } 
-  &__menu{
+  }
+
+  &__menu {
     width: 50px;
     border-radius: 50%;
     background-color: #a3bbc8;
   }
-  &__link--num{
+
+  &__link--num {
     position: relative;
   }
-  &__num{
+
+  &__num {
     position: absolute;
     display: block;
     width: 16px;
@@ -76,20 +84,28 @@
 }
 
 
-.top-slider{
-  &__container{
+.top-slider {
+  &__container {
     background-color: #fcd7b6;
     padding-bottom: 40px;
   }
-  &__title{
-    font-size: 72px;line-height: 70px;
+
+  &__wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: 72px;
+    line-height: 70px;
     margin-bottom: 35px;
     @extend %rubik-500;
     color: $darkblue;
     max-width: 470px;
     text-transform: uppercase;
   }
-  &__text{
+
+  &__text {
     font-size: 18px;
     line-height: 30px;
     @extend %rubik-400;
@@ -97,7 +113,8 @@
     color: $lightblue;
     margin-bottom: 40px;
   }
-  &__btn{
+
+  &__btn {
     background-color: #a3bbc8;
     font-size: 15px;
     line-height: 12px;
@@ -107,7 +124,8 @@
     padding: 20px 100px 20px 30px;
     color: #fff;
     position: relative;
-    &::before{
+
+    &::before {
       content: "";
       position: absolute;
       background-image: url("../images/top-slider/arrow.svg");
@@ -118,23 +136,27 @@
       transform: translateY(-50%);
       right: 19px;
     }
-    
+
   }
-  &__item{
+
+  &__item {
     display: flex;
     justify-content: space-between;
     padding: 210px 0 200px;
   }
-  &__img{
+
+  &__img {
     margin-top: 50px;
   }
-  .slick-dots{
+
+  .slick-dots {
     display: flex;
     justify-content: center;
     column-gap: 10px;
     margin-top: -45px;
-    li{
-      button{
+
+    li {
+      button {
         border: none;
         background-color: #fff;
         width: 28px;
@@ -146,8 +168,9 @@
         opacity: .3;
         transition: all .8s;
       }
-      &.slick-active{
-        button{
+
+      &.slick-active {
+        button {
           opacity: 1;
         }
       }
@@ -155,63 +178,174 @@
   }
 }
 
+.info {
+  margin-bottom: 65px;
+
+  &__inner {
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+    column-gap: 25px;
+    flex: 1;
+    padding: 45px 0;
+    justify-content: center;
+    align-items: center;
+    background-color: #fef7f0;
+    border-right: 1px solid #e8e4df;
+  }
+
+  &__item:last-child {
+    border: none;
+  }
+
+  &__title {
+    font-size: 18px;
+    line-height: 40px;
+    color: #414141;
+    @extend %dms-700;
+  }
+
+  &__text {
+    color: #585858;
+    max-width: 215px;
+    @extend %dms-400;
+  }
+}
+
+.products {
+  margin-bottom: 190px;
+  &__content{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 40px 30px;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    padding-bottom: 35px;
+    position: relative;
+    min-height: 350px; 
+  }
+  &__item:hover &__options{
+    opacity: 1;
+  }
+  &__img{
+    margin-top: auto;
+  }
+  &__title {
+    color: #243f4d;
+    line-height: 40px;
+    @extend %dms-500;
+    margin-top: auto;
+  }
+
+  &__price {
+    color: #a3bbc8;
+  }
+  &__options{
+    display: flex;
+    gap: 15px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all .3s;
+  }
+  &__link{
+    background-color: #fff;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all .3s;
+    path{
+      transition: all .3s;
+    }
+    &:hover{
+      background-color: #a3bbc8;
+      
+    }
+    &:hover path{
+      fill: #fff;
+    }
+  }
+}
 
 
 
-.footer{
+
+.footer {
   color: #7b7b7b;
   font-size: 14px;
   line-height: 32px;
   @extend %rubik-400;
   margin-top: auto;
 }
-.footer-top{
+
+.footer-top {
   display: flex;
   padding: 90px 0 70px;
   border-bottom: 1px solid #ececec;
-  &__contact{
+
+  &__contact {
     width: 200px;
     margin-right: 100px;
   }
-  &__services{
+
+  &__services {
     margin-right: 175px;
   }
-  &__form{
+
+  &__form {
     margin-left: auto;
     width: 270px;
     @extend %dms-400;
   }
-  &__item-title{
+
+  &__item-title {
     color: #1f2044;
     text-transform: uppercase;
     font-size: 16px;
-    line-height: 21px;  
+    line-height: 21px;
     margin-top: 17px;
     margin-bottom: 17px;
     @extend %dms-700;
   }
-  &__nav-link{
+
+  &__nav-link {
     color: inherit;
     display: block;
   }
-  &__item-text{
+
+  &__item-text {
     line-height: 24px;
     margin-bottom: 30px;
   }
 
-  &__form-input{
+  &__form-input {
     padding: 10px 15px;
     border: none;
     max-width: 170px;
     width: 100%;
     background-color: #fef7f0;
-    &::placeholder{
+
+    &::placeholder {
       color: #234969;
       font-size: 12px;
       @extend %dms-400;
     }
   }
-  &__form-btn{
+
+  &__form-btn {
     border: none;
     padding: 10px 15px;
     background-color: #a3bbc8;
@@ -221,34 +355,41 @@
     width: 100%;
   }
 }
-.address{
+
+.address {
   font-style: normal;
   margin-top: 30px;
-  a{
+
+  a {
     color: inherit;
     display: block;
   }
-  &__map{
+
+  &__map {
     line-height: 24px;
   }
 }
-.footer-bottom{
+
+.footer-bottom {
   height: 90px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  &__nav{
+
+  &__nav {
     display: flex;
-    
+
   }
-  &__link{
+
+  &__link {
     padding: 0 15px;
     color: inherit;
     display: block;
     line-height: 18px;
     border-left: 1px solid #7b7b7b;
   }
-  &__link--border{
+
+  &__link--border {
     border: none;
   }
 }
