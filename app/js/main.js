@@ -9,7 +9,22 @@ $(function () {
     autoplay: true,
     autoplaySpeed: 2000,
   });
-  var mixer = mixitup('.products__content', {
+  var mixerOne = mixitup('.products__content', {
+    controls:{
+      scope:'local'
+    },
+    animation: {
+      animateResizeTargets:true,
+      animateResizeContainer: false,
+        reverseOut: true,
+        nudge: false ,// Disable nudging to create a carousel-like effect
+        clampHeight: false,
+    }
+  });
+  var mixerTwo = mixitup('.design__content', {
+    controls:{
+      scope:'local'
+    },
     animation: {
       animateResizeTargets:true,
       animateResizeContainer: false,
