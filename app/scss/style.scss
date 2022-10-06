@@ -3,7 +3,7 @@
 @import 'reset';
 @import 'libs';
 @import 'global';
-
+@import 'keyframes';
 
 .header__inner {
   padding: 50px 0;
@@ -369,7 +369,9 @@
 
 .design {
   padding-top: 100px 0;
-
+  &__content{
+    margin-bottom: 115px;
+  }
   &__content-inner {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -428,6 +430,22 @@
        bottom: 40px;
        right: -130px;
     }
+  }
+  &__video{
+    display: flex;
+    min-height: 500px;
+    justify-content: center;
+    align-items: center;
+    background: url('../images/design/design-video.jpg') center/cover no-repeat;
+
+  }
+  svg{
+    overflow: visible;
+  }
+  &__video-path{
+    transform-origin: center center;
+    transform-box: fill-box;
+    animation:expand 5s linear infinite;
   }
 }
 
